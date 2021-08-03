@@ -1,9 +1,6 @@
 package guru.sprintframework.sfgd;
 
-import guru.sprintframework.sfgd.controllers.ConstructorInjectedController;
-import guru.sprintframework.sfgd.controllers.MyController;
-import guru.sprintframework.sfgd.controllers.PropertyInjectedController;
-import guru.sprintframework.sfgd.controllers.SetterInjectedController;
+import guru.sprintframework.sfgd.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -32,6 +29,11 @@ public class SfgDApplication {
 		System.out.println("-------- Constructor" );
 		ConstructorInjectedController constructorInjectedController = (ConstructorInjectedController) ctx.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.getGreeting());
+	// I18nController
+
+		System.out.println("-------- Profiles" );
+		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.getGreeting());
 
 	}
 
