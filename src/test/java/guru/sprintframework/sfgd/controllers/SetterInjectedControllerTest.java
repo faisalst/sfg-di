@@ -1,11 +1,8 @@
 package guru.sprintframework.sfgd.controllers;
 
-import guru.sprintframework.sfgd.services.GreetingService;
-import guru.sprintframework.sfgd.services.GreetingServiceImpl;
+import guru.sprintframework.sfgd.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class SetterInjectedControllerTest {
 
@@ -15,7 +12,7 @@ class SetterInjectedControllerTest {
     void setUp() {
 
         setterInjectedController = new SetterInjectedController();
-        setterInjectedController.setGreetingService(new GreetingServiceImpl());
+        setterInjectedController.setGreetingService(new ConstructorGreetingService());
 
     }
 

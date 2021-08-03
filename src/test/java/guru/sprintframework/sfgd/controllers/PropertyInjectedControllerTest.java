@@ -1,10 +1,8 @@
 package guru.sprintframework.sfgd.controllers;
 
-import guru.sprintframework.sfgd.services.GreetingServiceImpl;
+import guru.sprintframework.sfgd.services.ConstructorGreetingService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
 
@@ -16,7 +14,7 @@ class PropertyInjectedControllerTest {
         // it creates the controller
     propertyInjectedController = new PropertyInjectedController();
     // it injects the service we need to use.
-    propertyInjectedController.greetingService = new GreetingServiceImpl();
+    propertyInjectedController.greetingService = new ConstructorGreetingService();
     }
 
     @Test
